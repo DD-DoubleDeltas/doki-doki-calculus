@@ -147,6 +147,7 @@ define config.save_directory = "doki_doki_calculus-1546858408"
 ## 작업 표시 줄 또는 독에 표시되는 아이콘.
 
 define config.window_icon = "gui/window_icon.png"
+define config.automatic_images = True
 
 
 ## 빌드 구성 #######################################################################
