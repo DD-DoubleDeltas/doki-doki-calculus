@@ -14,7 +14,8 @@ label start:
     #장면 : 교실
     "딩동댕동"
     dasuk "으아아 드디어 시험이 끝났다"
-    show chime default
+    show chime default at center:
+        xalign 0.7
     chime "드디어 끝이네!"
     chime "시험은 잘 봤니?"
     hide chime
@@ -400,24 +401,14 @@ label chapter_1_2_1:
     daye "..아무것도 아니야"
     "아무리 봐도 기분이 상한 것 같은데, 왜 저럴까..."
     "흐음...?"
+    chime "그럼 조금 난이도를 올려 볼까?"
+    show expression "chapter-1-2-1-eq-1.png" as eq at truecenter
+    dasuk "흐음?"
+    "골때리게 생겼는데..."
+    dasuk "일단 나눠 봐야겠어"
+    "분모분자에 0이 아닌 수를 곱해도 극한값은 변하지 않을 것이다"
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
     e "새로운 렌파이 게임을 만들었군요."
 
     e "이야기와 그림, 음악을 더하면 여러분의 게임을 세상에 배포할 수 있어요!"
