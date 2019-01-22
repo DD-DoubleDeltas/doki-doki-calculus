@@ -28,15 +28,15 @@ label start:
     chime "너, 이번 수학은 잘 봤냐?"
     hide chime
     "수학이라, 내 가채점 결과는 87점인데..."
-	menu:
-		"잘 봤어.":
-			call start_sub
-			jump start_1
-		"망했어.":
-			jump start_1
-		"잘 망했어."
-			#WIP
-			jump start_1
+    menu:
+        "잘 봤어.":
+            call start_sub
+            jump start_1
+        "망했어.":
+            jump start_1
+        "잘 망했어."
+            #WIP
+            jump start_1
     chime "같이 숙제할 때 봤는데, 너 외워서 하는것 같던데?"
     hide chime
     "틀린 말은 아니다. 공식은 당연히 외웠고, 학습지에 나온 패턴들을 외우니 그나마 쉬웠다."
@@ -146,18 +146,18 @@ label start:
     jump chapter_1_1_intro
 
 label start_sub:
-	show chime default
-	chime "오, 그래? 몇 점인데?"
-	hide chime
-	dasuk "87점."
-	show chime default
-	chime "오~ 생각보다 잘 쳤는데에!"
-	"차임이는 내 점수를 듣고는 약간 비꼬는 투로 말한다."
-	"아무래도 차임이는 나를 과소평가했던 것 같다."
-	hide chime
-	dasuk "나 수학 원래 잘 하는데?"
-	show chime default
-	return
+    show chime default
+    chime "오, 그래? 몇 점인데?"
+    hide chime
+    dasuk "87점."
+    show chime default
+    chime "오~ 생각보다 잘 쳤는데에!"
+    "차임이는 내 점수를 듣고는 약간 비꼬는 투로 말한다."
+    "아무래도 차임이는 나를 과소평가했던 것 같다."
+    hide chime
+    dasuk "나 수학 원래 잘 하는데?"
+    show chime default
+    return
     
 #챕터1, 극한
 label chapter_1_1_intro:
@@ -228,30 +228,30 @@ label chapter_1_1_intro:
    $middle_edu = 0
    $high_edu = 0
 
-	menu:
-		"딱히 없는것 같아.":
-			jump chapter_1_1_outro
-		"한없이 다가간다?":
-			$ high_edu += 1
-			dasuk "저기 lim기호 보고 생각난건데"
-			show expression "chapter-1-1-eq-3.png" as eq at truecenter
-			chime "응?"
-			dasuk "생각해보니 일단 저거 h에 0을 대입한다는것은 아니잖아"
-			chime "그렇지"
-			dasuk "그런데 그냥 0으로 접근하다 보면 0을 대입하게 되는거 아냐..?"
-			"뭔가 표현이 애매하다"
-			dasuk "한없이 가까워진다는 표현도 조금 애매하다고 생각해"
-			daye "좋은 지적이야. 사실, 이 부분은 이전의 수학자들에게도 지적된 부분이기는 해"
-			dasuk "앵?"
-			daye "...이 부분은 고등학교 레벨에서는 다루지 못하게 되어 있어. 대학교 레벨이라는 거야"
-			chime "오?"
-			hide eq
-			daye "궁금하면 해석학에 대해서 스스로 검색 정도만 해봐."
-			dasuk "흐음..."
-			daye "참고로 이거 무시해도 고등학교에서는 논리 전개에는 문제가 없어"
-			dasuk "오호, 그럼 일단 넘기는걸로"
-			chime "그런걸로!"
-			jump chapter_1_1_outro
+    menu:
+        "딱히 없는것 같아.":
+            jump chapter_1_1_outro
+        "한없이 다가간다?":
+            $ high_edu += 1
+            dasuk "저기 lim기호 보고 생각난건데"
+            show expression "chapter-1-1-eq-3.png" as eq at truecenter
+            chime "응?"
+            dasuk "생각해보니 일단 저거 h에 0을 대입한다는것은 아니잖아"
+            chime "그렇지"
+            dasuk "그런데 그냥 0으로 접근하다 보면 0을 대입하게 되는거 아냐..?"
+            "뭔가 표현이 애매하다"
+            dasuk "한없이 가까워진다는 표현도 조금 애매하다고 생각해"
+            daye "좋은 지적이야. 사실, 이 부분은 이전의 수학자들에게도 지적된 부분이기는 해"
+            dasuk "앵?"
+            daye "...이 부분은 고등학교 레벨에서는 다루지 못하게 되어 있어. 대학교 레벨이라는 거야"
+            chime "오?"
+            hide eq
+            daye "궁금하면 해석학에 대해서 스스로 검색 정도만 해봐."
+            dasuk "흐음..."
+            daye "참고로 이거 무시해도 고등학교에서는 논리 전개에는 문제가 없어"
+            dasuk "오호, 그럼 일단 넘기는걸로"
+            chime "그런걸로!"
+            jump chapter_1_1_outro
     
 label chapter_1_1_outro:
     chime "어우야, 이제 조금 쉬었다가 하는게 어때?"
