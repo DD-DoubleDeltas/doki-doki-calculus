@@ -136,7 +136,7 @@ label chapter_1_1_intro:
    chime "...고등학교 미적분에서 다루기는 어려워"
    dasuk "그래? 그럼 미분이 왜 필요한지 설명이 필요한데"
    daye "공이 떨어진다고 생각해보자"
-   show expression "chapter-1-1-pic-1.png" as pic
+   show expression "chapter-1-1-pic-1.png" as pic at truecenter
    "다예가 그림을 그렸다"
    dasuk "이 화살표는?"
    chime "...공기저항?"
@@ -156,7 +156,7 @@ label chapter_1_1_intro:
    chime "...우리 시험범위에 도함수의 정의가 있었는데, 진짜 다 까먹었나 보네"
    daye "...평균변화율이 뭔지 알아?"
    dasuk "으음...x가 h만큼 변할때 f의 변화를 h로 나눈거"
-   show expression "chapter-1-1-eq-1.png" as eq
+   scene expression "chapter-1-1-eq-1.png" as eq at truecenter
    chime "그러니까, 이렇게"
    "차임이가 식을 하나 적었다."
    dasuk "그런데 왜?"
@@ -175,7 +175,7 @@ label chapter_1_1_intro:
    hide eq
    chime "너가 방금 말한 h를 0으로 접근시킨 평균변화율은 나중에 순간변화율이라 다시 나오겠지만"
    chime "식으로 쓰면 이렇게...."
-   show expression "chapter-1-1-eq-2.png" as eq
+   scene expression "chapter-1-1-eq-2.png" as eq at truecenter
    dasuk "흐음? lim?"
    daye "limit, 리미트, 리밋. 마음대로 읽어. 극한이라는 뜻이고 밑에 h를 0으로 보낸다는 이야기야"
    chime "..허허 어쩌다 보니 함수의 극한이 나왔네?"
