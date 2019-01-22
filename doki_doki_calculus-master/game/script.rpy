@@ -323,6 +323,18 @@ label chapter_1_2_intro:
 	daye "엄밀하게 증명하는 것은 아까 말했지만 미적분학 레벨이 아니므로 생략!"
 	dasuk "흐음.. 왠지 이게 굉장히 중요했던 것으로 기억하는데.."
 	chime "그렇지. 중요하지"
+	hide eq
+	chime "그러면 이건 어때?"
+	show expression "chapter-1-2-eq-3.png" as eq
+	dasuk "응?"
+	"계속 키우는 마당에 n이나 n+2나 똑같을것 같은데"
+	hide eq
+	daye "..."
+	dasuk "0"
+	daye "이런걸 두고 '수렴한다'고 하는거야"
+	dasuk "흐음? 그러면 수렴하지 않는 것도 있다는 거잖아?"
+	daye "당연하지"
+	
 	
 	
 	
