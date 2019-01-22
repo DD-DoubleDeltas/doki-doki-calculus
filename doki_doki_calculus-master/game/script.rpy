@@ -293,7 +293,7 @@ label chapter_1_1_outro:
 		"수열의 극한에 대한 차임이의 설명을 듣게 되었다"
 		jump chapter_1_2_intro
 	
-label chapter_1_2_intro:
+label chapter_1_2_intro: #수열의 극한-수렴과 발산
 	#다시 동아리실 배경
 	dasuk "수열의 극한이라..."
 	daye "수열에 대해서 기억하니?"
@@ -334,6 +334,56 @@ label chapter_1_2_intro:
 	daye "이런걸 두고 '수렴한다'고 하는거야"
 	dasuk "흐음? 그러면 수렴하지 않는 것도 있다는 거잖아?"
 	daye "당연하지"
+	chime "예를 들면..."
+	show expression "chapter-1-2-eq-4.png" as eq
+	daye "이건 어떻게 될것 같니?"
+	dasuk "...계속 커지기만 하는거잖아?"
+	chime "그렇지. 이렇게 특정한 값에 한없이 가까워지지 않는 것을 두고 통틀어서 '발산'한다고 해"
+	hide eq
+	daye "흐음... 이건 어때?"
+	show expression "chapter-1-2-eq-5.png" as eq
+	dasuk "흐음...완전히 저세상 가는 것은 아니군"
+	chime "(빤히)"
+	daye "(뚫어져라..)"
+	"....이것은 수렴일까?"
+menu:
+	"수렴한다":
+	jump chapter_1_2_intro_sub_1
+	
+	"발산한다":
+	jump chapter_1_2_intro_sub_2
+	
+label chapter_1_2_intro_sub_1:
+	dasuk "수렴하는것 같은데?"
+	daye "...하아"
+	chime "...어디에 수렴하는것 같은데?"
+	"우선 이 수열은 1 혹은 -1이다"
+	"만약 둘 중 어느 한 값에 한없이 가까워진다면 그것이 수렴값이다"
+	"...어래?"
+	dasuk "미안.. 발산이네"
+	daye "...발산이 맞지. 다만 이 경우는 왔다갔다 한다는 의미에서 진동한다고 하기도 해"
+	chime "발산의 특별한 경우라서 그런것 같아"
+	jump chapter_1_2_1
+
+label chapter_1_2_intro_sub_2:
+	dasuk "발산이네"
+	daye "정답"
+	chime "발산의 특별한 케이스야. '진동'이라고 하기도 해"
+	dasuk "특정한 값에 가까워 지지 않는다...에서 발산이네"
+	daye "그렇지!"
+	"왠지 안심한 표정의 다예"
+	dasuk "...어째 안심한 것 같다?"
+	daye "이 문제를 보고 발산이 아니다라고 말하는 경우가 있어"
+	chime "그런 의미에서 안심했다고나 할가..."
+	jump_chapter_1_2_1
+	
+label chapter_1_2_1:
+	dasuk "그래서, 수렴과 발산, 그리고 발산의 특별한 경우인 진동이 뭔지는 이해를 했는데"
+	chime "...너 문제랑 답 외워서 시험 쳤잖아"
+	daye "...교과서와 참고교재 위주의 출제가 좋다면 좋고 싫다면 싫은 부분이 여기 있네"
+	"다예가 불만스러운 표정을 짓고 있다"
+	
+	
 	
 	
 	
