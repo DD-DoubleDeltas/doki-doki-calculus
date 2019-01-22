@@ -4,8 +4,7 @@
 # image eileen happy = "eileen_happy.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
-define e = Character('아이린', color="#c8ffc8")
-define daye = Character('박다예',color="#ffffff")
+define daye  = Character('박다예',color="#ffffff")
 define dasuk = Character('민다석',color="#ffffff")
 define chime = Character('이차임',color="#ffffff")
 # 여기에서부터 게임이 시작합니다.
@@ -13,28 +12,50 @@ define chime = Character('이차임',color="#ffffff")
 label start:
     #장면 : 교실
     "딩동댕동"
-    dasuk "으아아 드디어 시험이 끝났다"
+    dasuk "으아- 드디어 시험 끝났다!"
+    "사흘 간 몰아치던 긴장감이 방금의 종소리로 순식간에 허무하게 사라졌다."
+    "해방감과 피로에 젖어있을 무렵, 누군가가 내 자리를 향해 걸어오는 것이 들렸다."
     show chime default at center:
         xalign 0.7
     chime "드디어 끝이네!"
     chime "시험은 잘 봤니?"
     hide chime
-    dasuk "나 국어 망해가지고..."
+    dasuk "나 국어 망했는데..."
     show chime default
-    "이차임. 인미고등학교 2학년"
-    "나와 같은반인, 소꿉친구다"
-    "뭐, 이렇게 시험 끝나고 이런저런 이야기를 나누는게 이상한건 아니라고"
-    chime "수학은 잘 봤냐?"
+    "내 앞에 서 있는 얘는 이차임. 인미고등학교 2학년"
+    "나와 같은 반인, 소꿉친구다."
+    "뭐, 이렇게 시험 끝난 날에는 잘했는지, 망했는지, 서로 안부를 묻고는 한다."
+    chime "너, 이번 수학은 잘 봤냐?"
     hide chime
-    dasuk "가채점 결과 87점"
-    show chime default
-    chime "생각보다는 잘 나왔는걸? 진짜야?"
+    "수학이라, 내 가채점 결과는 87점인데..."
+   
+menu:
+    "잘 봤어.":
+        show chime default
+        chime "오, 그래? 몇 점인데?"
+        hide chime
+        dasuk "87점."
+        show chime default
+        chime "오~ 생각보다 잘 쳤는데에!"
+        "차임이는 내 점수를 듣고는 약간 비꼬는 투로 말한다."
+        "아무래도 차임이는 나를 과소평가했던 것 같다."
+        hide chime
+        dasuk "나 수학 원래 잘 하는데?"
+        show chime default
+        jump start_1
+    "망했어.":
+        #WIP
+        jump start_1
+    "잘 망했어."
+        #WIP
+        jump start_1
+
+label start_1:
+    chime "같이 숙제할 때 봤는데, 너 외워서 하는것 같던데?"
     hide chime
-    dasuk "나 수학 원래 잘 하는데?"
-    show chime default
-    chime "같이 숙제할 때 봤는데, 너 외워서 하는것 같던데"
-    hide chime
-    dasuk "메모리에 올려두고 연산을 줄이는 것도 꽤나 좋은 기법이란다"
+    "틀린 말은 아니다. 공식은 당연히 외웠고, 학습지에 나온 패턴들을 외우니 그나마 쉬웠다."
+    dasuk "메모리에 올려두고 연산을 줄이는 것도 꽤나 좋은 기법이란다."
+    "컴공과생처럼 말해본다. 수학을 암기로 푼다는게 자랑할 거리는 아닌 것 같지만."
     show chime default
     chime "너정도 머리되는 애면 연산도 꽤나 잘 할것 같단 말이야"
     hide chime
@@ -44,7 +65,8 @@ label start:
     "return 0; //이곳을 탈출한다"
     #TIP추가. 다석 : 프로그래밍
     chime "어디가..!"
-    
+
+label start_gohome:
     #장면 : 하교길
     "집에 가는 길은 정말 애매하다."
     "버스를 타기에는 너무 가깝다."
@@ -138,6 +160,7 @@ label start:
     dasuk "...네"
     "하아...앞날이 깜깜하다...."
     jump chapter_1_1_intro
+    
 #챕터1, 극한
 label chapter_1_1_intro:
    dasuk "...그래서 일단 책을 들고 왔어"
@@ -206,6 +229,7 @@ label chapter_1_1_intro:
    daye "그래서 이렇게 극한의 필요성에 대한 설명이 끝났는데, 질문 있니?"
    $middle_edu = 0
    $high_edu = 0
+
 menu:
     "딱히 없는것 같아.":
         jump chapter_1_1_outro
@@ -407,11 +431,4 @@ label chapter_1_2_1:
     "골때리게 생겼는데..."
     dasuk "일단 나눠 봐야겠어"
     "분모분자에 0이 아닌 수를 곱해도 극한값은 변하지 않을 것이다"
-    
-    
-    e "새로운 렌파이 게임을 만들었군요."
-
-    e "이야기와 그림, 음악을 더하면 여러분의 게임을 세상에 배포할 수 있어요!"
-    daye "그렇다냥"
-
     return
