@@ -318,7 +318,7 @@ label chapter_1_2_intro: #수열의 극한-수렴과 발산
     daye "...고등학교에서 수열의 정의를 어떻게 하고 있는지는 모르겠지만, 자연수집합에서 실수집합으로 가는 함수라고 보렴..."
     "꽤나 적당한 정의군"
     chime "우선 가장 간단한 예시부터 볼까?"
-    show expression "chapter-1-2-eq-1.png" as eq at truecenter
+    show expression "chapter-1-2-0-eq-1.png" as eq at truecenter
     daye "일단 이 식의 의미가 뭔지 말해봐"
     dasuk "어디보자, 우선 n이 무한대로 '간다'고 되어 있네"
     "즉 n을 계속 크게 하겠다는 소리이다."
@@ -332,7 +332,7 @@ label chapter_1_2_intro: #수열의 극한-수렴과 발산
     if high_edu > 0:
         "만약, 0 이외의 양수에 가까워진다고 가정한다면, n을 충분히 크게 하면 그 양수보다 작은 1/n이 있거든"
         "개발자" "정확한 것은 아르키메데스 정리를 검색해보세요!"
-    show expression "chapter-1-2-eq-2.png" as eq at truecenter
+    show expression "chapter-1-2-0-eq-2.png" as eq at truecenter
     dasuk "엄밀하게 증명은 못하겠는데 0 인것 같다."
     chime "정답"
     daye "엄밀하게 증명하는 것은 아까 말했지만 미적분학 레벨이 아니므로 생략!"
@@ -340,7 +340,7 @@ label chapter_1_2_intro: #수열의 극한-수렴과 발산
     chime "그렇지. 중요하지"
     hide eq
     chime "그러면 이건 어때?"
-    show expression "chapter-1-2-eq-3.png" as eq at truecenter
+    show expression "chapter-1-2-0-eq-3.png" as eq at truecenter
     dasuk "응?"
     "계속 키우는 마당에 n이나 n+2나 똑같을것 같은데"
     hide eq
@@ -350,13 +350,13 @@ label chapter_1_2_intro: #수열의 극한-수렴과 발산
     dasuk "흐음? 그러면 수렴하지 않는 것도 있다는 거잖아?"
     daye "당연하지"
     chime "예를 들면..."
-    show expression "chapter-1-2-eq-4.png" as eq at truecenter
+    show expression "chapter-1-2-0-eq-4.png" as eq at truecenter
     daye "이건 어떻게 될것 같니?"
     dasuk "...계속 커지기만 하는거잖아?"
     chime "그렇지. 이렇게 특정한 값에 한없이 가까워지지 않는 것을 두고 통틀어서 '발산'한다고 해"
     hide eq
     daye "흐음... 이건 어때?"
-    show expression "chapter-1-2-eq-5.png" as eq at truecenter
+    show expression "chapter-1-2-0-eq-5.png" as eq at truecenter
     dasuk "흐음...완전히 저세상 가는 것은 아니군"
     chime "(빤히)"
     daye "(뚫어져라..)"
