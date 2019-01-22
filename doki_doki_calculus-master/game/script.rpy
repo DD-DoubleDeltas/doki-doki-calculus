@@ -294,12 +294,21 @@ label chapter_1_1_outro:
 		jump chapter_1_2_intro
 	
 label chapter_1_2_intro:
+	#다시 동아리실 배경
 	dasuk "수열의 극한이라..."
 	daye "수열에 대해서 기억하니?"
 	chime "과연?"
 	dasuk "수의 나열"
 	chime "딱히 틀린말은 아닌것 같은데"
 	daye "...고등학교에서 수열의 정의를 어떻게 하고 있는지는 모르겠지만, 자연수집합에서 실수집합으로 가는 함수라고 보렴..."
+	"꽤나 적당한 정의군"
+	chime "우선 가장 간단한 예시부터 볼까?"
+	show expression "chapter-1-2-eq-1.png" as eq
+	daye "일단 이 식의 의미가 뭔지 말해봐"
+	dasuk "어디보자, 우선 n이 무한대로 '간다'고 되어 있네"
+	"즉 n을 계속 크게 하겠다는 소리이다."
+	dasuk "그때의 1/n을 의미하는 건데"
+	chime "값이 존재할까?"
 	
 	
 	
