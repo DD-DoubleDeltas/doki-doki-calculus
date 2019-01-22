@@ -30,13 +30,15 @@ label start:
     "수학이라, 내 가채점 결과는 87점인데..."
     menu:
         "잘 봤어.":
-            call start_sub
+            call start_sub_1
             jump start_1
         "망했어.":
+            call start_sub_2
             jump start_1
         "잘 망했어."
-            #WIP
+            call start_sub_3
             jump start_1
+    show chime default
     chime "같이 숙제할 때 봤는데, 너 외워서 하는것 같던데?"
     hide chime
     "틀린 말은 아니다. 공식은 당연히 외웠고, 학습지에 나온 패턴들을 외우니 그나마 쉬웠다."
@@ -145,7 +147,8 @@ label start:
     "하아...앞날이 깜깜하다...."
     jump chapter_1_1_intro
 
-label start_sub:
+label start_sub_1:
+    dasuk "잘 쳤어."
     show chime default
     chime "오, 그래? 몇 점인데?"
     hide chime
@@ -157,7 +160,43 @@ label start_sub:
     hide chime
     dasuk "나 수학 원래 잘 하는데?"
     show chime default
+    chime "거짓말 하지 마~!"
+    hide chime
     return
+    
+label start_sub_2:
+    dasuk "망했어."
+    show chime default
+    chime "흐음... 괜찮아, 몇 점인데 그래?"
+    hide chime
+    dasuk "87점."
+    show chime default
+    chime "뭐야, 잘 쳤는데? 이게 망했다구?"
+    "분명 자신감이 없었지만, 차임이는 의외라는 듯 되려 놀라고 있다."
+    hide chime
+    dasuk "하... 아깝다. 하나만 더 맞으면 2등급도 노려볼 수 있는데."
+    show chime default
+    chime "너 주제에 그 정도면 잘 한거지~ 뭘 더 바래?"
+    hide chime
+    "어쭈, 저게 놀리고 있네."
+    return
+    
+label start_sub_3:
+    dasuk "잘 망했어."
+    "내가 말했어도 무슨 소리인가 싶다."
+    show chime default
+    chime "뭐야, 그 애매한 대답은...? 그래서 몇 점인데 그래?"
+    hide chime
+    dasuk "87점."
+    show chime default
+    chime "으음... 잘 치지도 못 치지도 않은 애매한 점수?"
+    hide chime
+    dasuk "그렇지."
+    show chime default
+    chime "푸흐, 너 한테 딱 맞는 점수 아냐?"
+    hide chime
+    return
+    
     
 #챕터1, 극한
 label chapter_1_1_intro:
