@@ -14,19 +14,29 @@ label start:
     #장면 : 교실
     "딩동댕동"
     dasuk "으아아 드디어 시험이 끝났다"
+    show chime default
     chime "드디어 끝이네!"
     chime "시험은 잘 봤니?"
+    hide chime
     dasuk "나 국어 망해가지고..."
+    show chime default
     "이차임. 인미고등학교 2학년"
     "나와 같은반인, 소꿉친구다"
     "뭐, 이렇게 시험 끝나고 이런저런 이야기를 나누는게 이상한건 아니라고"
     chime "수학은 잘 봤냐?"
+    hide chime
     dasuk "가채점 결과 87점"
+    show chime default
     chime "생각보다는 잘 나왔는걸? 진짜야?"
+    hide chime
     dasuk "나 수학 원래 잘 하는데?"
+    show chime default
     chime "같이 숙제할 때 봤는데, 너 외워서 하는것 같던데"
+    hide chime
     dasuk "메모리에 올려두고 연산을 줄이는 것도 꽤나 좋은 기법이란다"
+    show chime default
     chime "너정도 머리되는 애면 연산도 꽤나 잘 할것 같단 말이야"
+    hide chime
     "아..차임아 제발"
     "이럴때는..!"
     dasuk "흠.. 나는 일단 집에 갈거야"
@@ -45,9 +55,11 @@ label start:
     "그런 생각을 하며 오늘도 집으로 간다"
     dasuk "흠.. 오늘도 같은 길을 가는 것인가?"
     "항상 같은 길을 가는 학생이 있다"
+    show daye default
     "흑발에 긴 머리."
     "어떤 날은 내가 앞서가고, 어떤 날은 그녀가 앞서 간다."
     "오늘은 그녀가 앞서 간다"
+    hide daye
     dasuk "흠.."
     "나는 거의 등속력으로 움직인다."
     "길을 x축과 같이 두면 dx/dt = Constant(상수)"
@@ -59,16 +71,23 @@ label start:
     "각 HOF가 증가하고 있다는 것을 나는 인지하지 못했다."
     "HOF가 거의 3.14에 다다랐을 무렵 나는 그녀와 충돌하였다"
     dasuk "아, 미안!"
+    show daye default
     "???" "......민다석"
+    hide daye
     dasuk "....아... 박다예?"
+    show daye default
     "출석번호상 바로 나 다음인데, 이름 정도는 알고 있다"
     "수학과 과학에 있어서는 상위권을 놓치지 않는 그녀"
     "국어나 영어는... 글쎄?"
     daye "이제 알았냐?"
+    hide daye
     dasuk "히익"
     "얘 무서워"
+    show daye default
     daye "각 Head-Eye-Foot이 pi에 근접하는 것을 알았으면 멈춰야 할 거 아냐?!"
+    hide daye
     dasuk "....미안"
+    show daye default
     daye "흐음... 마침 잘 된것 같다"
     "응??? 갑자기 훅 들어오네?"
     "우리 반에서 그렇게 말 많이하고 지낸 그런사이 아닌데"
@@ -380,6 +399,7 @@ label chapter_1_2_1:
     chime "다예야?"
     daye "..아무것도 아니야"
     "아무리 봐도 기분이 상한 것 같은데, 왜 저럴까..."
+    "흐음...?"
     
     
     
