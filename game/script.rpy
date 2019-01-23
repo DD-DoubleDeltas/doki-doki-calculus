@@ -463,5 +463,33 @@ label chapter_1_2_1:
     dasuk "흐음?"
     "골때리게 생겼는데..."
     dasuk "일단 나눠 봐야겠어"
+    hide eq
+    show chime default
     "분모분자에 0이 아닌 수를 곱해도 극한값은 변하지 않을 것이다"
+    dasuk "식을 이렇게 바꿔볼께!"
+    "n은 임의의 자연수이니까 아무 문제없겠지"
+
+label chapter_1_2_1_Example:
+    show expression "chapter-1-2-1-eq-2.png" as eq at truecenter
+    "n으로 나누기를 두 번 해본 결과, 식은 이렇게 바뀌었는데"
+    "답은 뭘까?"
+    hide eq
+    menu:
+        "1. 발산한다":
+            call chapter_1_2_1_sub_False
+        "2. 0":
+            call chapter_1_2_1_sub_False
+        "3. 1/4":
+            call chapter_1_2_1_sub_True
+        "4. 1":
+            call chapter_1_2_1_sub_False
     return
+    
+label chapter_1_2_1_sub_True:
+    chime "정답!"
+    return
+    
+label chapter_1_2_1_sub_False:
+    chime "....아니야"
+    "다시 생각해 볼까?
+    jump chapter_1_2_1_Example
