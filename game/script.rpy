@@ -548,6 +548,26 @@ label chapter_1_2_1_Example:
 
 label chater_1_2_2: #다양한 종류의 수열의 극한
     "개발자" "그래서 예제풀이를 어떻게 구현해야 할까"
+    show daye default
+    daye "그러면 이것을 한 번 봐줄래?"
+    hide daye
+    dasuk "어디보자..."
+    show expression "chapter-1-2-2-eq-1.png" as eq at truecenter
+    #예제
+    dasuk "이건...."
+    "역시 이것도 조금 깔끔하게 만들 필요가 있겠어"
+    hide eq
+    "그럼 일단 이걸 이렇게 하고..."
+    show expression "chapter-1-2-2-eq-2.png"as eq at truecenter
+    #풀이
+    dasuk "어디보자...이거 일단"
+    menu:
+        "수렴하네":
+            daye "응, 수렴해"
+        "발산하네":
+            chime "아니, 수렴하는데"
+    
+    
     
 label chapter_1_2_1_sub_True:
     chime "정답!"
