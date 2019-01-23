@@ -613,3 +613,7 @@ label chapter_1_2_2_Ex2:
             "정답"
         "수렴":
             "오답"
+
+label chapter_1_2_2_Ex3:
+    show chime default
+    chime "그럼 이번문제는.."
