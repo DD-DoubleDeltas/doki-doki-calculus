@@ -606,13 +606,35 @@ label chapter_1_2_2_Ex2:
     daye "자, 쉬운 문제니까 한 번 풀어봐"
     show expression "chapter-1-2-2-eq-3.png" as eq at truecenter
     dasuk "흐음...."
+    hide eq
     menu:
         "n으로 나눠본다.":
             "풀이"
+            call chapter_1_2_2_Ex2_sovle
         "발산":
             "정답"
+            call chapter_1_2_2_Ex2_solve
         "수렴":
-            "오답"
+            chime "오답"
+            daye "하아..."
+            "개발자" "....이건 좀 심한데"
+            daye "있잖아..."
+            chime "너 어디 아파?"
+            dasuk "으음..."
+            "수렴과 발산을 착각했나?"
+            "손이 미끄러진건가 말실수를 한 건가"
+            "뭔가 "
+            daye "...집에가자..."
+            "배드엔딩. 미적분포기자"
+            
+
+label chapter_1_2_2_Ex2_solve:
+    "식을 우선 알아보기 쉽게 정리해주자."
+    show expression "chapter-1-2-2-eq-4.png" as eq at truecenter
+    dasuk "이렇게 나눠주고...."
+    chime "흐음... 정석적인 풀이네"
+    daye "그렇지. 굉장히 정석적이야."
+    return
 
 label chapter_1_2_2_Ex3:
     show chime default
