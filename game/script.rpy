@@ -533,7 +533,21 @@ label chapter_1_2_1_Example:
             call chapter_1_2_1_sub_True
         "4. 1":
             call chapter_1_2_1_sub_False
-    return
+    #정답이 나오지 않으면 빠져나올 수 없는 구조
+    "어우 겨우 맞췄네"
+    dasuk "그럼 이제 수열의 극한은 끝난거야?"
+    show chime default at center:
+        xalign 0.7
+    show daye default at center:
+        xalign 0.3
+    chime "....."
+    daye "...이제 연습을 해야지?"
+    hide chime
+    hide daye
+    "으아아아아악!!"
+
+label chater_1_2_2: #다양한 종류의 수열의 극한
+    "개발자" "그래서 예제풀이를 어떻게 구현해야 할까"
     
 label chapter_1_2_1_sub_True:
     chime "정답!"
