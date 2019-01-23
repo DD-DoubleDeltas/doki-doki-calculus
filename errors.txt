@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 593: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-        "다시 생각해 볼까?
+File "game/script.rpy", line 60: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
+    "알았어, 그럼 나중에..."
+                    ^
 
 Ren'Py Version: Ren'Py 7.1.1.929
-Wed Jan 23 20:11:37 2019
+Wed Jan 23 20:12:36 2019

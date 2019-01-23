@@ -57,9 +57,9 @@ label start:
     menu:
         "됐고, 집에 갈꺼야.":
             call start_sub2_1
-        "알았어, 그럼 나중에..."
+        "알았어, 그럼 나중에...":
             call start_sub2_2
-        "return 0;"
+        "return 0;":
             call start_sub2_3
 
     #장면 : 하교길
