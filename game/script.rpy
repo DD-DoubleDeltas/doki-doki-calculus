@@ -600,7 +600,16 @@ label chapter_1_2_2_Ex2:
         daye "...응?"
         dasuk "아..아무것도 아닙니다."
         daye "....그래"
+    hide daye
     "....."
     "........."
     daye "자, 쉬운 문제니까 한 번 풀어봐"
-    
+    show expression "chapter-1-2-2-eq-3.png" as eq at truecenter
+    dasuk "흐음...."
+    menu:
+        "n으로 나눠본다.":
+            "풀이"
+        "발산":
+            "정답"
+        "수렴":
+            "오답"
