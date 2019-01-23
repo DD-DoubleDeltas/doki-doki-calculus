@@ -634,8 +634,22 @@ label chapter_1_2_2_Ex2_solve:
     dasuk "이렇게 나눠주고...."
     chime "흐음... 정석적인 풀이네"
     daye "그렇지. 굉장히 정석적이야."
-    return
+    hide eq
+    jump chapter_1_2_2_Ex3
 
 label chapter_1_2_2_Ex3:
     show chime default
     chime "그럼 이번문제는.."
+    #power-limit
+    show expression "chapter-1-2-2-eq-5.png" as eq at truecenter
+    dasuk "흐음....일단 증감을 생각해볼까"
+    hide eq
+    "1/n처럼 감소하며, 0 이상의 값을 가지는 수열이다."
+    "굉장히 빠르게 감소하는 수열이긴 한데 결국은 0 가까이 간다."
+    show expression "chapter-1-2-2-eq-6.png" as eq at treucenter
+    dasuk "0"
+    hide eq
+    daye "흐음..."
+    chime "너무 쉬웠나?"
+    daye "지수의 극한을 이해한것으로 굉장한 성과라고 생각하는데"
+    
