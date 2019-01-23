@@ -30,26 +30,38 @@ label start:
     "수학이라, 내 가채점 결과는 87점인데..."
     menu:
         "잘 봤어.":
-            call start_sub_1
+            call start_sub1_1
         "망했어.":
-            call start_sub_2
+            call start_sub1_2
         "잘 망했어.":
-            call start_sub_3
+            call start_sub1_3
     show chime default
     chime "같이 숙제할 때 봤는데, 너 외워서 하는것 같던데?"
     hide chime
-    "틀린 말은 아니다. 공식은 당연히 외웠고, 학습지에 나온 패턴들을 외우니 그나마 쉬웠다."
+    "틀린 말은 아니다. 공식은 당연히 외웠고, 학습지에 나온 패턴들을 모조리 외워서 이 점수인 것이다."
     dasuk "메모리에 올려두고 연산을 줄이는 것도 꽤나 좋은 기법이란다."
-    "컴공과생처럼 말해본다. 수학을 암기로 푼다는게 자랑할 거리는 아닌 것 같지만."
+    "수학을 암기로 푼다는게 자랑할 거리는 아닌 것 같지만."
+    "일부러 유식한 척 티를 내본다. 이러면 보통 극혐하면서 떨어져 나가니깐."
     show chime default
-    chime "너정도 머리되는 애면 연산도 꽤나 잘 할것 같단 말이야"
+    chime "후후, 그치? 너정도 머리되는 애면 연산도 꽤나 잘 할것 같구..."
+    "...변수가 생겼다."
+    "오늘따라 차임이가 유난히 내 옆에 붙어오며 치근댄다."
+    "소꿉친구로써 이런 반응을 보이는 이유를 모를 리는 없다."
+    "최소한 무슨 속셈이 있어서 저런 거겠지."
+    "반응을 보아하니, 학원에서 오답풀이라도 시켰나보다. 대신 해달란 거겠지."
     hide chime
-    "아..차임아 제발"
-    "이럴때는..!"
-    dasuk "흠.. 나는 일단 집에 갈거야"
-    "return 0; //이곳을 탈출한다"
-    #TIP추가. 다석 : 프로그래밍
-    chime "어디가..!"
+    "당연하겠지만, 귀찮다."
+    "시험도 끝난 마당에 더 이상 수학 문제를 보긴 싫다."
+    "수학이 싫지 않다 해도, 체력이 달린다."
+    "차임이에게 최대한 자연스럽게 거절하려면..."
+    menu:
+        "됐고, 집에 갈꺼야.":
+            call start_sub2_1
+        "알았어, 그럼 나중에..."
+            call start_sub2_2
+        "return 0;"
+            call start_sub2_3
+
     #장면 : 하교길
     "집에 가는 길은 정말 애매하다."
     "버스를 타기에는 너무 가깝다."
@@ -144,7 +156,7 @@ label start:
     "하아...앞날이 깜깜하다...."
     jump chapter_1_1_intro
 
-label start_sub_1:
+label start_sub1_1:
     dasuk "잘 쳤어."
     show chime default
     chime "오, 그래? 몇 점인데?"
@@ -161,7 +173,7 @@ label start_sub_1:
     hide chime
     return
     
-label start_sub_2:
+label start_sub1_2:
     dasuk "망했어."
     show chime default
     chime "흐음... 괜찮아, 몇 점인데 그래?"
@@ -178,7 +190,7 @@ label start_sub_2:
     "어쭈, 저게 놀리고 있네."
     return
     
-label start_sub_3:
+label start_sub1_3:
     dasuk "잘 망했어."
     "내가 말했어도 무슨 소리인가 싶다."
     show chime default
@@ -194,6 +206,44 @@ label start_sub_3:
     hide chime
     return
     
+label start_sub2_1:
+    dasuk "됐고, 집에 갈꺼야."
+    "이런 부탁일수록 확실히 뿌리쳐야만 한다."
+    "아니면 차임이는 내 말을 무시하고 계속 늘어질 게 뻔하다."
+    show chime default
+    chime "칫, 쪼잔하긴."
+    dasuk "수작 부리지마. 너한테 속은 게 한두 번이었어야지."
+    hide chime
+    "차임이는 나한테 대놓고 불만스러움을 드러내고 있다."
+    "뭐, 어쩌라고. 나도 휴먼이야, 휴먼!"
+    "...차임이는 무시하고, 집으로 돌아가기로 했다."
+    return
+
+
+label start_sub2_2:
+    dasuk "하... 알았으니깐 그럼 나중에..."
+    show chime default
+    chime "역시 눈치가 빨라! 나중에 해주겠단 거지!?"
+    hide chime
+    "이런."
+    "차임이의 눈동자가 반짝반짝하고 빛나는 것 같다."
+    show chime default
+    chime "그럼, 이거 5시까지 부탁해!"
+    hide chime
+    "자기 멋대로 일정까지 다 잡아놓는다."
+    "이래서 휘말리게 되면 엄청 귀찮아진다."
+    "안 하면 더 귀찮아 진다. 빨리 끝내놓자."
+    return
+
+label start_sub2_3:
+    dasuk "'return 0;'"
+    "만약 이 세상이 누군가의 시뮬레이션이라면, 이걸로 이 상황을 빠져 나올 수 있을 것이다."
+    show chime default
+    chime "응? 뭐라고 했어?"
+    "아까 전의 터무니없는 소리를 들은 차임이가 당황한다."
+    "혹시나 했던 망상일 뿐이지만, 그게 아니면 이 세상은 C언어 계열이 아닌 것 같다."
+    "...됐고, 차임이가 멍 때리는 사이 어서 학교를 빠져나가자."
+    return
     
 #챕터1, 극한
 label chapter_1_1_intro:
