@@ -219,7 +219,6 @@ label start_sub2_1:
     "...차임이는 무시하고, 집으로 돌아가기로 했다."
     return
 
-
 label start_sub2_2:
     dasuk "하... 알았으니깐 그럼 나중에..."
     show chime default
@@ -547,6 +546,16 @@ label chapter_1_2_1_Example:
     "으아아아아악!!"
 	jump chapter_1_2_2_Ex1
 
+label chapter_1_2_1_sub_True:
+    chime "정답!"
+    return
+    
+label chapter_1_2_1_sub_False:
+    chime "....아니야"
+    "다시 생각해 볼까?
+    jump chapter_1_2_1_Example
+
+
 label chapter_1_2_2_Ex1: #다양한 종류의 수열의 극한
     "개발자" "그래서 예제풀이를 어떻게 구현해야 할까"
     show daye default
@@ -580,13 +589,18 @@ label chapter_1_2_2_Ex1: #다양한 종류의 수열의 극한
 			"개발자" "다예-호감도감소-이벤트 구성"
 		"상수배 했지만 1/n의 극한값이 0이라서 0*(3/4)=0이다냥!!!":
 			"개발자" "뭐 어떻게 처리해볼까"
+    jump chapter_1_2_2_Ex2:
+
+label chapter_1_2_2_Ex2:
+    show daye default
+    daye "...그럼 다음문제 간다."
+    "다예가 칠판에 문제를 쓰고 있다."
+    if high_edu > 0:
+        dasuk "나도 저렇게 수학을 잘 할수 있다면..."
+        daye "...응?"
+        dasuk "아..아무것도 아닙니다."
+        daye "....그래"
+    "....."
+    "........."
+    daye "자, 쉬운 문제니까 한 번 풀어봐"
     
-    
-label chapter_1_2_1_sub_True:
-    chime "정답!"
-    return
-    
-label chapter_1_2_1_sub_False:
-    chime "....아니야"
-    "다시 생각해 볼까?
-    jump chapter_1_2_1_Example
