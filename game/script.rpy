@@ -688,6 +688,7 @@ label chapter_1_2_2_Ex3:
     daye "지수의 극한을 이해한것으로 굉장한 성과라고 생각하는데"
     show expression "chapter-1-2-2-eq-7.png" as eq at truecenter
     daye "이건 어때?"
+    hide eq
     menu:
         "수렴":
             "오답 루틴"
@@ -696,6 +697,59 @@ label chapter_1_2_2_Ex3:
     jump chapter_1_2_2_Ex4
 
 label chapter_1_2_2_Ex4:
-    show expression "chapter-1-2-2-eq-Ex4-1.png"
+    chime "난이도를 올려볼까?"
+    daye "굳이 해야하나..?"
+    chime "...처음부터 하는 거니까"
+    dasuk "암기로 때워서 미안!!"
+    menu:
+        "차임이에게 예제를 요청한다":
+            show chime default
+            chime "....?"
+            hide chime
+            "개발자" "어떻게 해야 잘 부탁할 수 있을까"
+            "냥발자" "그러게 말입니다"
+            "움프" "그러게"
+        "다예에게 예제를 요청한다":
+            show daye default
+            daye "....?"
+            hide daye
+            "개발자" "일단 분기를 만들어 놨는데"
+            "냥발자" "에라이"
+
+label chapter_1_2_2_Ex4_chime:
+    show chime default
+    chime "흐음..?"
+    dasuk "....부탁할께"
+    chime "...어디보자. 괜찮은 예제가 있을텐데"
+    "차임이가 개*리를 뒤적거리고 있다"
+    "개발자" "개소리를 뒤적거리고 있다고?"
+    daye "시끄러. 별 하나 빼먹은 놈아"
+    hide chime
+    "차임이가 문제를 적고 있다.."
+    chime "...."
+    chime "........."
+    chime "다 적었어!"
+    dasuk "흐음..?"
+    show expression "chapter-1-2-2-eq-Ex4-1.png" as eq at truecenter
+    dasuk "어디보자..."
+    "우선 저기 2와 5의 거듭제곱에 관한 항은 0으로 가는 것을 이미 알고 있다."
+    dasuk "우선 하나를 지워봐야 겠어"
+    hide eq
+    chime "(반짝반짝)"
+    daye "(빤히)"
+    dasuk "....."
+    show expression "chapter-1-2-2-eq-Ex4-2.png" as eq at truecenter
+    dasuk "이렇게 2의 n거듭제곱을 분모분자에 곱해주자."
+    chime "응응!"
+    dasuk "그러면 이 식은 어떻게 되냐하면..."
+    "개발자" "다음으로 넘어가기 전에 여러분도 풀어보시기 바랍니다!"
+    "개발자" "스포일러 주의(5 중 1)"
+    "개발자" "스포일러 주의(5 중 2)"
+    "개발자" "스포일러 주의(5 중 3)"
+    "개발자" "스포일러 주의(5 중 4)"
+    "개발자" "스포일러 주의(5 중 5)"
+    hide eq
+    show expression "chapter-1-2-2-eq-Ex4-3.png" as eq at truecenter
+    
 
     
