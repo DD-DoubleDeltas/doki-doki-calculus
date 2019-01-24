@@ -578,7 +578,7 @@ label chapter_1_2_1_sub_True:
     
 label chapter_1_2_1_sub_False:
     chime "....아니야"
-    "다시 생각해 볼까?
+    "다시 생각해 볼까?"
     jump chapter_1_2_1_Example
 
 label chapter_1_2_2_ExFailBadEndingWarning:
