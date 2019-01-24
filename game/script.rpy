@@ -706,6 +706,7 @@ label chapter_1_2_2_Ex4:
             show chime default
             chime "....?"
             hide chime
+            call chapter_1_2_2_Ex4_chime
             "개발자" "어떻게 해야 잘 부탁할 수 있을까"
             "냥발자" "그러게 말입니다"
             "움프" "그러게"
@@ -715,6 +716,7 @@ label chapter_1_2_2_Ex4:
             hide daye
             "개발자" "일단 분기를 만들어 놨는데"
             "냥발자" "에라이"
+    return
 
 label chapter_1_2_2_Ex4_chime:
     show chime default
@@ -738,18 +740,55 @@ label chapter_1_2_2_Ex4_chime:
     chime "(반짝반짝)"
     daye "(빤히)"
     dasuk "....."
-    show expression "chapter-1-2-2-eq-Ex4-2.png" as eq at truecenter
+    show expression "chapter-1-2-2-eq-Ex4-chime-2.png" as eq at truecenter
     dasuk "이렇게 2의 n거듭제곱을 분모분자에 곱해주자."
     chime "응응!"
     dasuk "그러면 이 식은 어떻게 되냐하면..."
+    call spoiler_warning
+    hide eq
+    show expression "chapter-1-2-2-eq-Ex4-chime-3.png" as eq at truecenter
+    dasuk "이렇게 된단 말이지..."
+    hide eq
+    "자, 그럼 이 계산을 어떻게 마무리 할까?"
+    "메뉴를 어떻게 짤까요 왓더헬"
+    menu:
+        "2/5의 n거듭제곱은 0이니까...":
+            "2/5의 n거듭제곱에 0을 대입한다."
+        "2/5의 n거듭제곱항은 무시할 수 있으니까...":
+            "그 항을 지운 형태로 식을 변형한다"
+    #사실 똑같은 소리라서
+    show expression "chapter-1-2-2-eq-Ex4-Ans.png" as eq at truecenter
+    chime "좋아!"
+    dasuk "오예스!!"
+    hide eq
+    "개발자" "...먹고싶다"
+    
+    "이후 다예가 5의 n거듭제곱을 곱하여 푸는 풀이를 보여주려고 했는데...."
+    "개발자" "다른 풀이를 보기 위해 만들어둔 분기입니다."
+    "개발자" "다른 풀이를 보고 싶으면 '본다'를 선택"
+    "개발자" "그냥 넘어가고 싶으면 '보지 않는다'를 선택"
+    "개발자" "이후 중등교육(미적분I/미적분II)/고등교육(다변수/벡터/미분방정식) 등 분기에는 영향이 없습니다."
+    "개발자" "'다른 풀이'를 감상하시겠습니까 메시지가 출력될 경우 참고해주세요!"
+    "다른 풀이" "다른 풀이를 보시겠습니까?"
+    menu:
+        "본다":
+            "미구현"
+        "보지 않는다":
+            "파구현"
+        "몰라":
+            "솔구현"
+
+    return
+
+label chapter_1_2_2_Ex4_daye:
+    show daye default
+    "흐음..."
+    
+label spoiler_warning:
     "개발자" "다음으로 넘어가기 전에 여러분도 풀어보시기 바랍니다!"
     "개발자" "스포일러 주의(5 중 1)"
     "개발자" "스포일러 주의(5 중 2)"
     "개발자" "스포일러 주의(5 중 3)"
     "개발자" "스포일러 주의(5 중 4)"
     "개발자" "스포일러 주의(5 중 5)"
-    hide eq
-    show expression "chapter-1-2-2-eq-Ex4-3.png" as eq at truecenter
-    
-
-    
+    return
