@@ -622,7 +622,7 @@ label chapter_1_2_2_Ex1: #다양한 종류의 수열의 극한
             "개발자" "다예-호감도감소-이벤트 구성"
         "상수배 했지만 1/n의 극한값이 0이라서 0*(3/4)=0이다냥!!!":
             "개발자" "뭐 어떻게 처리해볼까"
-    jump chapter_1_2_2_Ex2:
+    jump chapter_1_2_2_Ex2
 
 label chapter_1_2_2_Ex2:
     call dev_select_call
@@ -691,7 +691,7 @@ label chapter_1_2_2_Ex3:
     daye "흐음..."
     hide daye
     show cime default:
-        xalign 0.7:
+        xalign 0.7
     chime "너무 쉬웠나?"
     hide chime
     show daye default:
@@ -786,7 +786,7 @@ label chapter_1_2_2_Ex4_chime:
     "다른 풀이 안내" "다른 풀이를 보시겠습니까?"
     menu:
         "본다":
-            jump label chapter_1_2_2_Ex4_daye
+            jump chapter_1_2_2_Ex4_daye
         "보지 않는다":
             "파구현"
         "몰라":
