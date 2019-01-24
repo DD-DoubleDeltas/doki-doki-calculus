@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 614: Tab characters are not allowed in Ren'Py scripts.
+File "game/script.rpy", line 843: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+        dasuk "답은...
 
 Ren'Py Version: Ren'Py 7.1.1.929
-Thu Jan 24 21:06:28 2019
+Thu Jan 24 21:07:15 2019

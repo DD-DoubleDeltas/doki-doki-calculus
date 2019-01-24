@@ -840,7 +840,7 @@ label chapter_1_2_2_Ex4_daye:
             "무한대 항이 있으니까, 가장 기초적인 방법이라고나 할까"
             "그러면 상수항에 곱해진 2/5의 n거듭제곱은 0으로 가게 된다."
             "그러면 결국 0이군"
-    dasuk "답은...
+    dasuk "답은..."
     show expression "chapter-1-2-2-eq-Ex4-daye-3.png" as eq at truecenter
     dasuk "...이와 같습니다."
     daye "오케이!"
