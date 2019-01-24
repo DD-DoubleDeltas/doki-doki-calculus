@@ -561,6 +561,12 @@ label chapter_1_2_1_sub_False:
     "다시 생각해 볼까?
     jump chapter_1_2_1_Example
 
+label chapter_1_2_2_ExFailBadEndingWarning:
+    daye "....머리가 정말 안돌아가는건가..."
+    chime "글쎄다..."
+    dasuk "...그냥 외울까?"
+    "....Bad Ending?"
+    return
 
 label chapter_1_2_2_Ex1: #다양한 종류의 수열의 극한
     "개발자" "그래서 예제풀이를 어떻게 구현해야 할까"
@@ -647,6 +653,7 @@ label chapter_1_2_2_Ex3:
     show chime default
     chime "그럼 이번문제는.."
     #power-limit
+    hide chime
     show expression "chapter-1-2-2-eq-5.png" as eq at truecenter
     dasuk "흐음....일단 증감을 생각해볼까"
     hide eq
@@ -655,6 +662,23 @@ label chapter_1_2_2_Ex3:
     show expression "chapter-1-2-2-eq-6.png" as eq at treucenter
     dasuk "0"
     hide eq
+    show daye default:
+        xalign 0.3
     daye "흐음..."
+    hide daye
+    show cime default:
+        xalign 0.7:
     chime "너무 쉬웠나?"
+    hide chime
+    show daye default:
+        xalign 0.3
     daye "지수의 극한을 이해한것으로 굉장한 성과라고 생각하는데"
+    show expression "chapter-1-2-2-eq-7.png" as eq at truecenter
+    daye "이건 어때?"
+    menu:
+        "수렴":
+            "오답 루틴"
+        "발산":
+            "정답 루틴"
+
+    
