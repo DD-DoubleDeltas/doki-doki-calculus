@@ -680,5 +680,9 @@ label chapter_1_2_2_Ex3:
             "오답 루틴"
         "발산":
             "정답 루틴"
+    jump chapter_1_2_2_Ex4
+
+label chapter_1_2_2_Ex4:
+    show expression "chapter-1-2-2-eq-Ex4-1.png"
 
     
