@@ -11,6 +11,7 @@ define chime = Character('이차임',color="#ffffff")
 
 label start:
     #장면 : 교실
+    call dev_select_call
     "딩동댕동"
     dasuk "으아- 드디어 시험 끝났다!"
     "사흘 간 몰아치던 긴장감이 방금의 종소리로 순식간에 허무하게 사라졌다."
@@ -57,27 +58,27 @@ label start:
     menu:
         "됐고, 집에 갈꺼야.":
             call start_sub2_1
-        "알았어, 그럼 나중에..."
+        "알았어, 그럼 나중에...":
             call start_sub2_2
-        "return 0;"
+        "return 0;":
             call start_sub2_3
 
     #장면 : 하교길
     "집에 가는 길은 정말 애매하다."
     "버스를 타기에는 너무 가깝다."
-    dasuk "몇 정거장 갈 바에야..."
-    "택시는 안잡힌다"
-    dasuk "콜택시 부르기는 귀찮고, 돈도 아깝고"
+    dasuk "몇 정거장 갈 바에야... 택시를..."
+    "잡고 싶지만 안 잡힌다"
+    dasuk "콜택시 부르기는 귀찮고, 돈도 아깝고..."
     "그럼 걸어야지."
     dasuk "전혀 애매하지 않군"
     "그런 생각을 하며 오늘도 집으로 간다."
     dasuk "흠.. 오늘도 같은 길로 가나?"
     "항상 나와 같은 하교길을 가는 여자애가 있다."
     show daye default
-    "흑발에 긴 머리."
+    "저 흑발에 긴 머리."
     "어떤 날은 내가 앞서가고, 어떤 날은 그녀가 앞서 간다."
     "오늘은 그녀가 나를 앞서 간다. 내가 늦게 나온 탓이다."
-    "매번 봐서 그런지 별로 신경 쓰이진 않는다.
+    "매번 봐서 그런지 별로 신경 쓰이진 않는다."
     hide daye
     "......"
     "......"
@@ -97,8 +98,10 @@ label start:
     "???" "민다석."
     dasuk "아... 박다예?"
     show daye default
-    "출석번호상 바로 나 다음인데, 이름 정도는 알고 있다"
-    "수학과 과학에 있어서는 상위권을 놓치지 않는 그녀"
+    "???" "민다석."
+    dasuk "아... 박다예?"
+    "출석번호상 바로 나 다음인데, 이름 정도는 알고 있다."
+    "수학과 과학에 있어서는 상위권을 놓치지 않는 그녀."
     "국어나 영어는... 글쎄?"
     daye "이제 알았냐? 눈을 어디다 뜨고 다니는거야!"
     hide daye
@@ -151,7 +154,7 @@ label start:
     dasuk "음? 지금 나에게 연락할 사람이 누가 있지?"
     "연락할 사람 딱히 없는데? 뭐지?"
     dasuk "아..."
-    "다예 : 동아리 명은 '미적분의 이해"
+    "다예 : 동아리 명은 '미적분의 이해'"
     "차임 : 오오 멋져"
     "다예 : 내일 방과후부터 바로 활동 시작할거야"
     "다석 : 아아아아 시험 오늘 끝났잖아..."
@@ -171,6 +174,7 @@ label start:
     dasuk "...네"
     "하아...앞날이 깜깜하다...."
     jump chapter_1_1_intro
+
 
 label start_sub1_1:
     dasuk "잘 쳤어."
@@ -263,72 +267,74 @@ label start_sub2_3:
     
 #챕터1, 극한
 label chapter_1_1_intro:
-   dasuk "...그래서 일단 책을 들고 왔어"
-   chime "다석이가 시험기간이 아닐 때 책을 들고 있네"
-   dasuk "외울 때가 아니면 책을 볼 필요가 딱히 없으니까"
-   daye "찌릿"
-   "다예가 나를 째려본다"
-   dasuk "...그래서 오늘은 극한이라고?"
-   daye "응. 수열의 극한과 함수의 극한에 대하여 설명할 거야"
-   dasuk "극한... 뭐였지"
-   chime "흐음... 우선 극한이 뭔지부터 설명해줘야 할것 같기도 하고"
-   daye "....극한을 어디다가 쓸 수 있는지부터 말해줘야 하지 않을까? 일단 극한의 발명 역사는 나도 잘 몰라..."
-   chime "개인적인 의견이지만, 미분이나 적분이 없으면 극한이란건 우리가 접할 일이 없다고 생각해"
-   dasuk "흐음? 적어도 우리에게는 극한은 뭔가 필요해서 배우고 가는 느낌이라는것 같은데"
-   daye "실제로는 잘 모르겠어. 극한 자체로도 꽤나 중요하고 흥미로운 수학적 대상이지만"
-   chime "...고등학교 미적분에서 다루기는 어려워"
-   dasuk "그래? 그럼 미분이 왜 필요한지 설명이 필요한데"
-   daye "공이 떨어진다고 생각해보자"
-   show expression "chapter-1-1-pic-1.png" as pic at truecenter
-   "다예가 그림을 그렸다"
-   dasuk "이 화살표는?"
-   chime "...공기저항?"
-   daye "그렇지"
-   daye "공기저항, 즉 공의 속력 감소가 공의 속력에 비례한다면"
-   daye "낙하 시작 후 시각에 따른 공의 속력은?"
-   chime "흐음...꽤나 괜찮은 문제인데"
-   dasuk "....으음..."
-   dasuk "그러니까, 속력 변화와 속력이 들어가 있는 문제잖아"
-   "흐음..."
-   daye "그리고 하나 알아두어야 할 것"
-   daye "미분이라 함은"
-   chime "...변화량이다!"
-   daye "나중에 미분을 배울 때 다시 말해주겠지만, 미분은 어떤 함수의 변화량을 알 수 있는 도구라고 생각하면 편해"
-   dasuk "속력의 변화라 하니까 미분이 뭔지 알아야 겠는데. 그런데 극한과 무슨 관계가 있지?"
-   hide pic
-   chime "...우리 시험범위에 도함수의 정의가 있었는데, 진짜 다 까먹었나 보네"
-   daye "...평균변화율이 뭔지 알아?"
-   dasuk "으음...x가 h만큼 변할때 f의 변화를 h로 나눈거"
-   scene expression "chapter-1-1-eq-1.png" as eq at truecenter
-   chime "그러니까, 이렇게"
-   "차임이가 식을 하나 적었다."
-   dasuk "그런데 왜?"
-   daye ".....있잖아, 평균변화율의 단점이 뭔줄 알아?"
-   dasuk "????"
-   chime "예를 들어 t=1초부터 t=1.5초까지의 평균변화율은 알 수 있지만"
-   daye "t=1초때의 순간적인 변화율은 알 수 없어"
-   dasuk "굳이 알아야 하나?"
-   daye "...미분은 특정 순간에서의 변화율을 측정하는것. 평균변화율만으로는 정확한 값을 알 수 없어."
-   dasuk "흐음.. 그런데 저기서 만약에 h를 0가 0이 아닌, 0으로 접근시키고"
-   "분모가 0이 될 수는 없으니까, 0이라고 하기 보다는 0에 접근시키는 것이다.  대입이 아니니까 수학적 오류는 없겠지"
-   dasuk "그 때, 저 평균변화율 식이 어떤 값에 가까워진다면, 그것을 사용하면 문제가 없을것 같은데?"
-   chime "오호?"
-   "h를 0에 한없이 가깝게 접근시키면 사실상 순간적인 변화율이 될 것이다."
-   daye "잘 생각했는데 '한없이 접근시키는것'이 극한이야"
-   hide eq
-   chime "너가 방금 말한 h를 0으로 접근시킨 평균변화율은 나중에 순간변화율이라 다시 나오겠지만"
-   chime "식으로 쓰면 이렇게...."
-   show expression "chapter-1-1-eq-2.png" as eq at truecenter
-   dasuk "흐음? lim?"
-   daye "limit, 리미트, 리밋. 마음대로 읽어. 극한이라는 뜻이고 밑에 h를 0으로 보낸다는 이야기야"
-   chime "..허허 어쩌다 보니 함수의 극한이 나왔네?"
-   dasuk "뭐부터 해야 했던 거야?"
-   daye "으음, 고등학교에서는, 수열의 극한부터 하는 것이 미적분I의 배치로 알고 있는데"
-   chime "미적분 II는 미적분I 이수를 전제로 하니 패스"
-   hide eq
-   daye "그래서 이렇게 극한의 필요성에 대한 설명이 끝났는데, 질문 있니?"
-   $middle_edu = 0
-   $high_edu = 0
+    dasuk "...그래서 일단 책을 들고 왔어"
+    chime "다석이가 시험기간이 아닐 때 책을 들고 있네"
+    dasuk "외울 때가 아니면 책을 볼 필요가 딱히 없으니까"
+    daye "찌릿"
+    call dev_select_call
+    "다예가 나를 째려본다"
+    dasuk "...그래서 오늘은 극한이라고?"
+    daye "응. 수열의 극한과 함수의 극한에 대하여 설명할 거야"
+    dasuk "극한... 뭐였지"
+    chime "흐음... 우선 극한이 뭔지부터 설명해줘야 할것 같기도 하고"
+    daye "....극한을 어디다가 쓸 수 있는지부터 말해줘야 하지 않을까? 일단 극한의 발명 역사는 나도 잘 몰라..."
+    chime "개인적인 의견이지만, 미분이나 적분이 없으면 극한이란건 우리가 접할 일이 없다고 생각해"
+    dasuk "흐음? 적어도 우리에게는 극한은 뭔가 필요해서 배우고 가는 느낌이라는것 같은데"
+    daye "실제로는 잘 모르겠어. 극한 자체로도 꽤나 중요하고 흥미로운 수학적 대상이지만"
+    chime "...고등학교 미적분에서 다루기는 어려워"
+    dasuk "그래? 그럼 미분이 왜 필요한지 설명이 필요한데"
+    daye "공이 떨어진다고 생각해보자"
+    show expression "chapter-1-1-pic-1.png" as pic at truecenter
+    "다예가 그림을 그렸다"
+    dasuk "이 화살표는?"
+    chime "...공기저항?"
+    daye "그렇지"
+    daye "공기저항, 즉 공의 속력 감소가 공의 속력에 비례한다면"
+    daye "낙하 시작 후 시각에 따른 공의 속력은?"
+    chime "흐음...꽤나 괜찮은 문제인데"
+    dasuk "....으음..."
+    dasuk "그러니까, 속력 변화와 속력이 들어가 있는 문제잖아"
+    "흐음..."
+    daye "그리고 하나 알아두어야 할 것"
+    daye "미분이라 함은"
+    chime "...변화량이다!"
+    daye "나중에 미분을 배울 때 다시 말해주겠지만, 미분은 어떤 함수의 변화량을 알 수 있는 도구라고 생각하면 편해"
+    dasuk "속력의 변화라 하니까 미분이 뭔지 알아야 겠는데. 그런데 극한과 무슨 관계가 있지?"
+    hide pic
+    chime "...우리 시험범위에 도함수의 정의가 있었는데, 진짜 다 까먹었나 보네"
+    daye "...평균변화율이 뭔지 알아?"
+    dasuk "으음...x가 h만큼 변할때 f의 변화를 h로 나눈거"
+    scene expression "chapter-1-1-eq-1.png" as eq at truecenter
+    chime "그러니까, 이렇게"
+    "차임이가 식을 하나 적었다."
+    dasuk "그런데 왜?"
+    daye ".....있잖아, 평균변화율의 단점이 뭔줄 알아?"
+    dasuk "????"
+    chime "예를 들어 t=1초부터 t=1.5초까지의 평균변화율은 알 수 있지만"
+    daye "t=1초때의 순간적인 변화율은 알 수 없어"
+    dasuk "굳이 알아야 하나?"
+    daye "...미분은 특정 순간에서의 변화율을 측정하는것. 평균변화율만으로는 정확한 값을 알 수 없어."
+    dasuk "흐음.. 그런데 저기서 만약에 h를 0가 0이 아닌, 0으로 접근시키고"
+    "분모가 0이 될 수는 없으니까, 0이라고 하기 보다는 0에 접근시키는 것이다.  대입이 아니니까 수학적 오류는 없겠지"
+    dasuk "그 때, 저 평균변화율 식이 어떤 값에 가까워진다면, 그것을 사용하면 문제가 없을것 같은데?"
+    chime "오호?"
+    "h를 0에 한없이 가깝게 접근시키면 사실상 순간적인 변화율이 될 것이다."
+    daye "잘 생각했는데 '한없이 접근시키는것'이 극한이야"
+    hide eq
+    call dev_select_call
+    chime "너가 방금 말한 h를 0으로 접근시킨 평균변화율은 나중에 순간변화율이라 다시 나오겠지만"
+    chime "식으로 쓰면 이렇게...."
+    show expression "chapter-1-1-eq-2.png" as eq at truecenter
+    dasuk "흐음? lim?"
+    daye "limit, 리미트, 리밋. 마음대로 읽어. 극한이라는 뜻이고 밑에 h를 0으로 보낸다는 이야기야"
+    chime "..허허 어쩌다 보니 함수의 극한이 나왔네?"
+    dasuk "뭐부터 해야 했던 거야?"
+    daye "으음, 고등학교에서는, 수열의 극한부터 하는 것이 미적분I의 배치로 알고 있는데"
+    chime "미적분 II는 미적분I 이수를 전제로 하니 패스"
+    hide eq
+    daye "그래서 이렇게 극한의 필요성에 대한 설명이 끝났는데, 질문 있니?"
+    $middle_edu = 0
+    $high_edu = 0
 menu:
     "딱히 없는것 같아.":
         jump chapter_1_1_outro
@@ -434,6 +440,7 @@ label chapter_1_1_outro:
 label chapter_1_2_intro: #수열의 극한-수렴과 발산
     #다시 동아리실 배경
     dasuk "수열의 극한이라..."
+    call dev_select_call
     daye "수열에 대해서 기억하니?"
     chime "과연?"
     dasuk "수의 나열"
@@ -473,6 +480,7 @@ label chapter_1_2_intro: #수열의 극한-수렴과 발산
     dasuk "흐음? 그러면 수렴하지 않는 것도 있다는 거잖아?"
     daye "당연하지"
     chime "예를 들면..."
+    call dev_select_call
     show expression "chapter-1-2-0-eq-4.png" as eq at truecenter
     daye "이건 어떻게 될것 같니?"
     dasuk "...계속 커지기만 하는거잖아?"
@@ -518,6 +526,7 @@ label chapter_1_2_intro_sub_2:
 label chapter_1_2_1:
     dasuk "그래서, 수렴과 발산, 그리고 발산의 특별한 경우인 진동이 뭔지는 이해를 했는데"
     chime "...너 문제랑 답 외워서 시험 쳤잖아"
+    call dev_select_call
     daye "...교과서와 참고교재 위주의 출제가 좋다면 좋고 싫다면 싫은 부분이 여기 있네"
     "다예가 불만스러운 표정을 짓고 있다"
     chime "다예야?"
@@ -561,7 +570,7 @@ label chapter_1_2_1_Example:
     hide chime
     hide daye
     "으아아아아악!!"
-	jump chapter_1_2_2_Ex1
+    jump chapter_1_2_2_Ex1
 
 label chapter_1_2_1_sub_True:
     chime "정답!"
@@ -569,12 +578,19 @@ label chapter_1_2_1_sub_True:
     
 label chapter_1_2_1_sub_False:
     chime "....아니야"
-    "다시 생각해 볼까?
+    "다시 생각해 볼까?"
     jump chapter_1_2_1_Example
 
+label chapter_1_2_2_ExFailBadEndingWarning:
+    daye "....머리가 정말 안돌아가는건가..."
+    chime "글쎄다..."
+    dasuk "...그냥 외울까?"
+    "....Bad Ending?"
+    return
 
 label chapter_1_2_2_Ex1: #다양한 종류의 수열의 극한
     "개발자" "그래서 예제풀이를 어떻게 구현해야 할까"
+    call dev_select_call
     show daye default
     daye "그러면 이것을 한 번 봐줄래?"
     hide daye
@@ -588,27 +604,28 @@ label chapter_1_2_2_Ex1: #다양한 종류의 수열의 극한
     show expression "chapter-1-2-2-eq-2.png"as eq at truecenter
     #풀이
     dasuk "어디보자...이거 일단"
-	"식을 조작하는 작업은 끝냈는데...일단 수렴/발산 여부부터 말해보자"
-	hide eq
+    "식을 조작하는 작업은 끝냈는데...일단 수렴/발산 여부부터 말해보자"
+    hide eq
     menu:
         "수렴하네":
             daye "응, 수렴해"
         "발산하네":
             chime "아니, 수렴하는데"
-	daye "...1/n 극한에 상수만 붙인 거잖아"
-	dasuk "....."
-	daye "뭘 그렇게 생각할것까지야...."
-	dasuk "...."
-	menu:
-		"극한값은 0이다.":
-			"개발자" "정답 루틴"
-		"다예의 말에 발끈한다":
-			"개발자" "다예-호감도감소-이벤트 구성"
-		"상수배 했지만 1/n의 극한값이 0이라서 0*(3/4)=0이다냥!!!":
-			"개발자" "뭐 어떻게 처리해볼까"
-    jump chapter_1_2_2_Ex2:
+    daye "...1/n 극한에 상수만 붙인 거잖아"
+    dasuk "....."
+    daye "뭘 그렇게 생각할것까지야...."
+    dasuk "...."
+    menu:
+        "극한값은 0이다.":
+            "개발자" "정답 루틴"
+        "다예의 말에 발끈한다":
+            "개발자" "다예-호감도감소-이벤트 구성"
+        "상수배 했지만 1/n의 극한값이 0이라서 0*(3/4)=0이다냥!!!":
+            "개발자" "뭐 어떻게 처리해볼까"
+    jump chapter_1_2_2_Ex2
 
 label chapter_1_2_2_Ex2:
+    call dev_select_call
     show daye default
     daye "...그럼 다음문제 간다."
     "다예가 칠판에 문제를 쓰고 있다."
@@ -646,6 +663,7 @@ label chapter_1_2_2_Ex2:
             
 
 label chapter_1_2_2_Ex2_solve:
+    call dev_select_call
     "식을 우선 알아보기 쉽게 정리해주자."
     show expression "chapter-1-2-2-eq-4.png" as eq at truecenter
     dasuk "이렇게 나눠주고...."
@@ -655,9 +673,11 @@ label chapter_1_2_2_Ex2_solve:
     jump chapter_1_2_2_Ex3
 
 label chapter_1_2_2_Ex3:
+    call dev_select_call
     show chime default
     chime "그럼 이번문제는.."
     #power-limit
+    hide chime
     show expression "chapter-1-2-2-eq-5.png" as eq at truecenter
     dasuk "흐음....일단 증감을 생각해볼까"
     hide eq
@@ -666,7 +686,222 @@ label chapter_1_2_2_Ex3:
     show expression "chapter-1-2-2-eq-6.png" as eq at treucenter
     dasuk "0"
     hide eq
+    show daye default:
+        xalign 0.3
     daye "흐음..."
+    hide daye
+    show cime default:
+        xalign 0.7
     chime "너무 쉬웠나?"
+    hide chime
+    show daye default:
+        xalign 0.3
     daye "지수의 극한을 이해한것으로 굉장한 성과라고 생각하는데"
+    show expression "chapter-1-2-2-eq-7.png" as eq at truecenter
+    daye "이건 어때?"
+    hide eq
+    menu:
+        "수렴":
+            "오답 루틴"
+        "발산":
+            "정답 루틴"
+    jump chapter_1_2_2_Ex4
+
+label chapter_1_2_2_Ex4:
+    call dev_select_call
+    chime "난이도를 올려볼까?"
+    daye "굳이 해야하나..?"
+    chime "...처음부터 하는 거니까"
+    dasuk "암기로 때워서 미안!!"
+    menu:
+        "차임이에게 예제를 요청한다":
+            show chime default
+            chime "....?"
+            hide chime
+            call chapter_1_2_2_Ex4_chime
+            "개발자" "어떻게 해야 잘 부탁할 수 있을까"
+            "냥발자" "그러게 말입니다"
+            "움프" "그러게"
+        "다예에게 예제를 요청한다":
+            show daye default
+            daye "....?"
+            hide daye
+            call chapter_1_2_2_Ex4_daye
+            "개발자" "일단 분기를 만들어 놨는데"
+            "냥발자" "에라이"
+    "이다음 어쩌냥"
+    return
+
+label chapter_1_2_2_Ex4_chime:
+    call dev_select_call
+    show chime default
+    chime "흐음..?"
+    dasuk "....부탁할께"
+    chime "...어디보자. 괜찮은 예제가 있을텐데"
+    "차임이가 개*리를 뒤적거리고 있다"
+    "개발자" "개소리를 뒤적거리고 있다고?"
+    daye "시끄러. 별 하나 빼먹은 놈아"
+    hide chime
+    "차임이가 문제를 적고 있다.."
+    chime "...."
+    chime "........."
+    chime "다 적었어!"
+    dasuk "흐음..?"
+    show expression "chapter-1-2-2-eq-Ex4-1.png" as eq at truecenter
+    dasuk "어디보자..."
+    "우선 저기 2와 5의 거듭제곱에 관한 항은 0으로 가는 것을 이미 알고 있다."
+    dasuk "우선 하나를 지워봐야 겠어"
+    hide eq
+    chime "(반짝반짝)"
+    daye "(빤히)"
+    dasuk "....."
+    show expression "chapter-1-2-2-eq-Ex4-chime-2.png" as eq at truecenter
+    dasuk "이렇게 2의 n거듭제곱을 분모분자에 곱해주자."
+    chime "응응!"
+    dasuk "그러면 이 식은 어떻게 되냐하면..."
+    call spoiler_warning
+    hide eq
+    show expression "chapter-1-2-2-eq-Ex4-chime-3.png" as eq at truecenter
+    dasuk "이렇게 된단 말이지..."
+    hide eq
+    "자, 그럼 이 계산을 어떻게 마무리 할까?"
+    menu:
+        "2/5의 n거듭제곱은 0이니까...":
+            "2/5의 n거듭제곱에 0을 대입한다."
+        "2/5의 n거듭제곱항은 무시할 수 있으니까...":
+            "그 항을 지운 형태로 식을 변형한다"
+    #사실 똑같은 소리라서
+    show expression "chapter-1-2-2-eq-Ex4-Ans.png" as eq at truecenter
+    chime "좋아!"
+    dasuk "오예스!!"
+    hide eq
+    "개발자" "...먹고싶다"
     
+    "이후 다예가 5의 n거듭제곱을 곱하여 풀 수 있다는 말을 하는데..."
+    "개발자" "다른 풀이를 보기 위해 만들어둔 서브스토리 입니다."
+    "개발자" "다른 풀이를 보고 싶으면 '본다'를 선택"
+    "개발자" "그냥 넘어가고 싶으면 '보지 않는다'를 선택"
+    "개발자" "이후 중등교육(미적분I/미적분II)/고등교육(다변수/벡터/미분방정식) 등 분기에는 영향이 없습니다."
+    "개발자" "'다른 풀이'를 보시겠습니까?' 메시지가 출력될 경우 참고해주세요!"
+    "다른 풀이 안내" "다른 풀이를 보시겠습니까?"
+    menu:
+        "본다":
+            jump chapter_1_2_2_Ex4_daye
+        "보지 않는다":
+            "파구현"
+        "몰라":
+            "솔구현"
+
+    return
+
+label chapter_1_2_2_Ex4_daye:
+    call dev_select_call
+    show daye default
+    "나는 다예를 바라보았다."
+    daye "왜"
+    hide daye
+    dasuk "다예언니!! 예제 주세요!!"
+    daye "...예제가 없어서 맛이 갔나?"
+    dasuk "아무래도 그런것 같은데"
+    chime "시나리오 라이터가 콜라마시고 쓴것 같은데"
+    "개발자" "ㄲㅡ어억 다예언니이"
+    daye "예제 줄께 조금만 기다려"
+    show daye default
+    "...."
+    "다예가 칠판에 식을 쓰고 있다."
+    dasuk "l"
+    dasuk "li"
+    dasuk "lim"
+    dasuk "......"
+    "아"
+    "다예가 스르륵 하고 극한 기호를 쓰고 있다."
+    #"너무 매력적이야"
+    #금사빠냐 씨부레
+    #니가썻잖아 움프시키야
+    daye "자..완료!"
+    hide daye
+    dasuk "흐음...."
+    show expression "chapter-1-2-2-eq-Ex4-1.png" as eq at treucenter
+    daye "자.. 풀어보렴!"
+    dasuk "흐음...저 5가 거슬린다, 이 말입니다."
+    "5의 n승을 분모분자에 곱해 보자"
+    "....."
+    hide eq
+    "....."
+    show expression "chapter-1-2-2-eq-Ex4-daye-2.png"
+    dasuk "이렇게 변형된다..."
+    "자 그럼 이제 이것을 어떻게 끝장을 볼까?"
+    hide eq
+    menu:
+        "상수항을 무시해본다":
+            "5/2의 n거듭제곱은 무한대로 간다. 즉, 상수항은 무시해도 무방하겠지"
+            "마음속으로 상수항을 지운다.."
+        "양변을 5/2의 n제곱으로 나눈다고 생각해본다":
+            "무한대 항이 있으니까, 가장 기초적인 방법이라고나 할까"
+            "그러면 상수항에 곱해진 2/5의 n거듭제곱은 0으로 가게 된다."
+            "그러면 결국 0이군"
+    dasuk "답은..."
+    show expression "chapter-1-2-2-eq-Ex4-daye-3.png" as eq at truecenter
+    dasuk "...이와 같습니다."
+    daye "오케이!"
+    "차임이가 2의 n거듭제곱을 곱하여도 할 수 있다고 한다."
+    "개발자" "다른 풀이를 보기 위해 만들어둔 서브스토리 입니다."
+    "개발자" "다른 풀이를 보고 싶으면 '본다'를 선택"
+    "개발자" "그냥 넘어가고 싶으면 '보지 않는다'를 선택"
+    "개발자" "이후 중등교육(미적분I/미적분II)/고등교육(다변수/벡터/미분방정식) 등 분기에는 영향이 없습니다."
+    "개발자" "'다른 풀이'를 보시겠습니까?' 메시지가 출력될 경우 참고해주세요!"
+    "다른 풀이 안내" "다른 풀이를 보시겠습니까?"
+    menu:
+        "본다":
+            jump chapter_1_2_2_Ex4_chime
+        "보지 않는다":
+            "개발자" "미구현"
+    return
+
+label spoiler_warning:
+    "개발자" "다음으로 넘어가기 전에 여러분도 풀어보시기 바랍니다!"
+    "개발자" "스포일러 주의(5 중 1)"
+    "개발자" "스포일러 주의(5 중 2)"
+    "개발자" "스포일러 주의(5 중 3)"
+    "개발자" "스포일러 주의(5 중 4)"
+    "개발자" "스포일러 주의(5 중 5)"
+    return
+
+label dev_select_call:
+    "개발자를 위하여 dev_selection 블록을 만들었습니다. 원하는 챕터로 점프할 수 있습니다."
+    menu:
+        "call dev_selection":
+            call dev_selection
+        "jump dev_selection":
+            jump dev_selection
+        "그냥 진행하기":
+            "즐거운 디버깅 합시다."
+    return
+
+label dev_selection:
+    menu:
+        "start : 프롤로그":
+            jump start
+        "chapter_1 : 극한":
+            menu:
+                "chapter_1_1 : 극한의 정의와 설명":
+                    jump chapter_1_1_intro
+                "chapter_1_2 : 수열의 극한의 수렴과 발산":
+                    menu:
+                        "chapter_1_2_intro : 수열의 극한의 설명":
+                            jump chapter_1_2_intro
+                        "chapter_1_2_1 : 기초적인 수열의 극한":
+                            jump chapter_1_2_1
+                        "chapter_1_2_2 : 다양한 수열의 극한":
+                            menu:
+                                "chapter_1_2_2 의 시작":
+                                    jump chapter_1_2_2
+                                "chpater_1_2_2 예제1":
+                                    jump chapter_1_2_2_Ex1
+                                "chpater_1_2_2 예제2":
+                                    jump chapter_1_2_2_Ex2
+                                "chapter_1_2_2 예제3":
+                                    jump chapter_1_2_2_Ex3
+                                "chapter_1_2_2 예제4":
+                                    jump chapter_1_2_2_Ex4
+    return
